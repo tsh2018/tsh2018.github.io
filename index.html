@@ -62,6 +62,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="article-Summarize" class="article article-type-article" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/24/Summarize/" class="article-date">
+  <time datetime="2019-08-24T08:12:20.000Z" itemprop="datePublished">2019-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/24/Summarize/">Summarize</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>把子类对象赋值给父类类型，多态运行时还是表现子类特征<br>编译时看左边，运行时看右边</p>
+<h1 id="包装"><a href="#包装" class="headerlink" title="包装"></a>包装</h1><p>把包装类转成字符串 toString();<br>基本数据类型转字符串 str+“”；<br>字符串转基本数据类型 Double.parsedouble(str)<br>(不能有非数字存在)<br>转成int double等数据类型  str.intValue();</p>
+<h2 id="覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小"><a href="#覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小" class="headerlink" title="覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小"></a>覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小</h2><h1 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h1><p>抽象方法必须在抽象类或者抽象接口中<br>即加  abstract, 且抽象方法必须被子类去覆盖此方法，抽象方法也不能是private，static和final<br>用了final表示不能被覆盖<br>抽象方法是没有方法体的<br>抽象类必须有子类，一般被当作父类被继承<br>抽象类也不能创建对象<br>抽象类中可以有抽象方法， 也可以有非抽象方法<br>抽象类必须有子类才有意义，即有子类继承<br>子类没有去覆盖抽象方法，可以把子类也变成抽象方法，让孙子类再去覆盖抽象方法<br>抽象类中的构造方法不能私有化<br>抽象类名字前面通常有Abstract<br>不能有fina修饰l</p>
+<h1 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h1><p>interface 接口名称{}<br>接口是一个特殊的抽象类<br>如果接口内的方法没有加上abstract，编译时自动会加上 void  trans(); –&gt; public abstract void trans();接口中的方法也可以没有方法体（有abstract）<br>接口中默认成员变量 public static final<br>接口不能创建对象<br>接口中定义的变量全部都是全局静态常量<br>接口中定义的方法是公共抽象方法，不能有普通方法<br>接口中没有构造器<br>接口中可以定义内部类，也是Public abstract<br>接口是可以继承的，且可以多继承， 在extends<br>后面的接口以逗号隔开，类不能多继承</p>
+<h1 id="类实现接口（接口也可以做父类）"><a href="#类实现接口（接口也可以做父类）" class="headerlink" title="类实现接口（接口也可以做父类）"></a>类实现接口（接口也可以做父类）</h1><p>class 类的名称（extents classname）implements 接口的名称{}<br>类实现方法必须是public来修饰（覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小）<br>v</p>
+<h1 id="面向接口编程"><a href="#面向接口编程" class="headerlink" title="面向接口编程"></a>面向接口编程</h1><p>把实现类对象赋值给接口类型变量<br>即多态的好处，屏蔽了不同类之间的实现差异，从而达到通用编程</p>
+<h1 id="内部类（在类中的一个类）"><a href="#内部类（在类中的一个类）" class="headerlink" title="内部类（在类中的一个类）"></a>内部类（在类中的一个类）</h1><p>1.增强封装，不允许汽提塔类访问这个内部类<br>2.内部类可以访问外部类中的成员</p>
+<p>外部类的修饰符只能有两个 public或默认修饰<br>内部类可以使用很多个修饰符  </p>
+<p>创建实例内部类<br>class Outter{<br>class Inner{<br>}<br>}<br>   Outter out = new Outter();<br>Outter.Inner in = out. new Inner(); </p>
+<p>静态内部类（在内部类前面加上static）<br>Class Outter{<br>static Class Inner{<br>    static String color = “black”;<br>    int age = 10;<br>    void test(){<br>    system.out.println(name );<br>    system.out.println(new Outter().age);<br>    }<br>}<br>}</p>
+<p>Outter.Inner in = new Outte.Innerr();<br>静态内部类中没有外部类的引用，但是可以访问外部类的静态成员<br>访问静态内部类的静态成员可以不用创建对象直接通过 “  . ”调用 如Outter.Inner.color</p>
+<h1 id="局部内部类（定义在方法中的内部类）"><a href="#局部内部类（定义在方法中的内部类）" class="headerlink" title="局部内部类（定义在方法中的内部类）"></a>局部内部类（定义在方法中的内部类）</h1><p>不能使用一些修饰 public private。。。<br>只能在定义的方法中使用<br> 局部内部类不能包含静态变量</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/24/Summarize/" data-id="cjzp9qsk00005x4u5v88jxkd3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="w-REPORT-0" class="article article-type-w" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/02/REPORT-0/" class="article-date">
@@ -94,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/02/REPORT-0/" data-id="cjwei1htw0000a0u59h5jr363" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/02/REPORT-0/" data-id="cjzp9qsjy0003x4u5t6iml1py" class="article-share-link">Share</a>
       
       
     </footer>
@@ -135,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/13/Report/" data-id="cjwei1hug0005a0u5iosnz2vm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/13/Report/" data-id="cjzp9qsjs0001x4u5c9lcgco1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +226,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/28/vocation-report/" data-id="cjwei1hut0007a0u5jk4kclzw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/28/vocation-report/" data-id="cjzp9qsk20007x4u5senrqdmj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/04/Third-Report/" data-id="cjwei1hu90003a0u5qaeeaf8a" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/04/Third-Report/" data-id="cjzp9qsk20006x4u55aiei8ag" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/14/Second-Report/" data-id="cjwei1hub0004a0u5smrxmndl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/14/Second-Report/" data-id="cjzp9qsjz0004x4u5vhomd1ms" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/30/First-Report/" data-id="cjwei1hu80002a0u5hw3i5s56" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/30/First-Report/" data-id="cjzp9qsjl0000x4u5ycc27en0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -328,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/30/My-first-blog/" data-id="cjwei1hu60001a0u5qn89w4n7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/30/My-first-blog/" data-id="cjzp9qsjs0002x4u52tnbgnoq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +421,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/21/hello-world/" data-id="cjwei1huo0006a0u5477pwp65" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/21/hello-world/" data-id="cjzp9qsk20008x4u5h4k896nh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,7 +449,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
     </div>
   </div>
 
@@ -412,6 +460,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/08/24/Summarize/">Summarize</a>
+          </li>
         
           <li>
             <a href="/2019/06/02/REPORT-0/">report</a>
@@ -427,10 +479,6 @@
         
           <li>
             <a href="/2019/01/04/Third-Report/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/12/14/Second-Report/">article</a>
           </li>
         
       </ul>
