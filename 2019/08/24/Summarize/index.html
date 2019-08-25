@@ -7,17 +7,17 @@
   
   <title>Summarize | Farmers&#39; Yard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 包装把包装类转成字符串 toString();基本数据类型转字符串 str+“”；字符串转基本数据类型 Double.parsedouble(str)(不能有非数字存在)转成int double等数据类型  str.intValue(); 覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小抽象类与接口抽象">
+  <meta name="description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Summarize">
 <meta property="og:url" content="http://yoursite.com/2019/08/24/Summarize/index.html">
 <meta property="og:site_name" content="Farmers&#39; Yard">
-<meta property="og:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 包装把包装类转成字符串 toString();基本数据类型转字符串 str+“”；字符串转基本数据类型 Double.parsedouble(str)(不能有非数字存在)转成int double等数据类型  str.intValue(); 覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小抽象类与接口抽象">
+<meta property="og:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-24T08:14:56.322Z">
+<meta property="og:updated_time" content="2019-08-25T09:46:09.056Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summarize">
-<meta name="twitter:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 包装把包装类转成字符串 toString();基本数据类型转字符串 str+“”；字符串转基本数据类型 Double.parsedouble(str)(不能有非数字存在)转成int double等数据类型  str.intValue(); 覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小抽象类与接口抽象">
+<meta name="twitter:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
   
     <link rel="alternate" href="/atom.xml" title="Farmers&#39; Yard" type="application/atom+xml">
   
@@ -86,18 +86,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><p>把子类对象赋值给父类类型，多态运行时还是表现子类特征<br>编译时看左边，运行时看右边</p>
-<h1 id="包装"><a href="#包装" class="headerlink" title="包装"></a>包装</h1><p>把包装类转成字符串 toString();<br>基本数据类型转字符串 str+“”；<br>字符串转基本数据类型 Double.parsedouble(str)<br>(不能有非数字存在)<br>转成int double等数据类型  str.intValue();</p>
-<h2 id="覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小"><a href="#覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小" class="headerlink" title="覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小"></a>覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小</h2><h1 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h1><p>抽象方法必须在抽象类或者抽象接口中<br>即加  abstract, 且抽象方法必须被子类去覆盖此方法，抽象方法也不能是private，static和final<br>用了final表示不能被覆盖<br>抽象方法是没有方法体的<br>抽象类必须有子类，一般被当作父类被继承<br>抽象类也不能创建对象<br>抽象类中可以有抽象方法， 也可以有非抽象方法<br>抽象类必须有子类才有意义，即有子类继承<br>子类没有去覆盖抽象方法，可以把子类也变成抽象方法，让孙子类再去覆盖抽象方法<br>抽象类中的构造方法不能私有化<br>抽象类名字前面通常有Abstract<br>不能有fina修饰l</p>
-<h1 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h1><p>interface 接口名称{}<br>接口是一个特殊的抽象类<br>如果接口内的方法没有加上abstract，编译时自动会加上 void  trans(); –&gt; public abstract void trans();接口中的方法也可以没有方法体（有abstract）<br>接口中默认成员变量 public static final<br>接口不能创建对象<br>接口中定义的变量全部都是全局静态常量<br>接口中定义的方法是公共抽象方法，不能有普通方法<br>接口中没有构造器<br>接口中可以定义内部类，也是Public abstract<br>接口是可以继承的，且可以多继承， 在extends<br>后面的接口以逗号隔开，类不能多继承</p>
-<h1 id="类实现接口（接口也可以做父类）"><a href="#类实现接口（接口也可以做父类）" class="headerlink" title="类实现接口（接口也可以做父类）"></a>类实现接口（接口也可以做父类）</h1><p>class 类的名称（extents classname）implements 接口的名称{}<br>类实现方法必须是public来修饰（覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小）<br>v</p>
-<h1 id="面向接口编程"><a href="#面向接口编程" class="headerlink" title="面向接口编程"></a>面向接口编程</h1><p>把实现类对象赋值给接口类型变量<br>即多态的好处，屏蔽了不同类之间的实现差异，从而达到通用编程</p>
-<h1 id="内部类（在类中的一个类）"><a href="#内部类（在类中的一个类）" class="headerlink" title="内部类（在类中的一个类）"></a>内部类（在类中的一个类）</h1><p>1.增强封装，不允许汽提塔类访问这个内部类<br>2.内部类可以访问外部类中的成员</p>
+        <h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>把子类对象赋值给父类类型，多态运行时还是表现子类特征<br>编译时看左边，运行时看右边</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class mon&#123;</span><br><span class="line">private moon（）&#123;&#125; //将构造器私有化就可以不能创建对象</span><br><span class="line">............</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单例设计模式"><a href="#单例设计模式" class="headerlink" title="单例设计模式"></a>单例设计模式</h2><p>单例：一个类在内存中只有一个对象，别人不能再去创建对象<br>1.必须在该类中创建一个对象、<br>2.私有化自己的构造器，防止外界通过构造器来创建新的对象<br>3.对外界提供一个方法，能够获取已经创建好的对象</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">classs <span class="function"><span class="title">ToolUtil</span></span>()&#123;</span><br><span class="line">     //1.在该类中创建一个对象、</span><br><span class="line">     private static ToolUtil instance = new ToolUtil();</span><br><span class="line">     //2.私有化自己的构造器，防止外界通过构造器来创建新的对象</span><br><span class="line">     private <span class="function"><span class="title">ToolUtil</span></span>()&#123;&#125;</span><br><span class="line">     //3.对外界提供一个方法，能够获取已经创建好的对象 </span><br><span class="line">     static publicToolUtil <span class="function"><span class="title">getInstance</span></span>()&#123;</span><br><span class="line">     retrun instance;</span><br><span class="line">     &#125;</span><br><span class="line">public void <span class="function"><span class="title">sort</span></span>()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>调用sort方法： ToolUtil.getInstance().sort();</p>
+<h2 id="包装"><a href="#包装" class="headerlink" title="包装"></a>包装</h2><p>把包装类转成字符串 toString();<br>基本数据类型转字符串 str+“”；<br>字符串转基本数据类型 Double.parsedouble(str)<br>(不能有非数字存在)<br>转成int double等数据类型  str.intValue();</p>
+<p>覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小</p>
+<h2 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h2><p>抽象方法必须在抽象类或者抽象接口中<br>即加  abstract, 且抽象方法必须被子类去覆盖此方法，抽象方法也不能是private，static和final<br>用了final表示不能被覆盖<br>抽象方法是没有方法体的</p>
+<p>抽象类必须有子类，一般被当作父类被继承<br>抽象类也不能创建对象<br>抽象类中可以有抽象方法， 也可以有非抽象方法<br>抽象类必须有子类才有意义，即有子类继承<br>子类没有去覆盖抽象方法，可以把子类也变成抽象方法，让孙子类再去覆盖抽象方法<br>抽象类中的构造方法不能私有化<br>抽象类名字前面通常有Abstract<br>不能有fina修饰l</p>
+<h2 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h2><p>interface 接口名称{}<br>接口是一个特殊的抽象类<br>如果接口内的方法没有加上abstract，编译时自动会加上 void  trans(); –&gt; public abstract void trans();接口中的方法也可以没有方法体（有abstract）<br>接口中默认成员变量 public static final<br>接口不能创建对象<br>接口中定义的变量全部都是全局静态常量<br>接口中定义的方法是公共抽象方法，不能有普通方法<br>接口中没有构造器<br>接口中可以定义内部类，也是Public abstract<br>接口是可以继承的，且可以多继承， 在extends<br>后面的接口以逗号隔开，类不能多继承</p>
+<h2 id="类实现接口（接口也可以做父类）"><a href="#类实现接口（接口也可以做父类）" class="headerlink" title="类实现接口（接口也可以做父类）"></a>类实现接口（接口也可以做父类）</h2><p>class 类的名称（extents classname）implements 接口的名称{}<br>类实现方法必须是public来修饰（覆盖的时候，子类的方法权限要比父类大，或者一样大，不能比他小）</p>
+<h2 id="面向接口编程"><a href="#面向接口编程" class="headerlink" title="面向接口编程"></a>面向接口编程</h2><p>把实现类对象赋值给接口类型变量<br>即多态的好处，屏蔽了不同类之间的实现差异，从而达到通用编程</p>
+<h2 id="内部类（在类中的一个类）"><a href="#内部类（在类中的一个类）" class="headerlink" title="内部类（在类中的一个类）"></a>内部类（在类中的一个类）</h2><p>1.增强封装，不允许其他类访问这个内部类<br>2.内部类可以访问外部类中的成员</p>
 <p>外部类的修饰符只能有两个 public或默认修饰<br>内部类可以使用很多个修饰符  </p>
-<p>创建实例内部类<br>class Outter{<br>class Inner{<br>}<br>}<br>   Outter out = new Outter();<br>Outter.Inner in = out. new Inner(); </p>
-<p>静态内部类（在内部类前面加上static）<br>Class Outter{<br>static Class Inner{<br>    static String color = “black”;<br>    int age = 10;<br>    void test(){<br>    system.out.println(name );<br>    system.out.println(new Outter().age);<br>    }<br>}<br>}</p>
-<p>Outter.Inner in = new Outte.Innerr();<br>静态内部类中没有外部类的引用，但是可以访问外部类的静态成员<br>访问静态内部类的静态成员可以不用创建对象直接通过 “  . ”调用 如Outter.Inner.color</p>
-<h1 id="局部内部类（定义在方法中的内部类）"><a href="#局部内部类（定义在方法中的内部类）" class="headerlink" title="局部内部类（定义在方法中的内部类）"></a>局部内部类（定义在方法中的内部类）</h1><p>不能使用一些修饰 public private。。。<br>只能在定义的方法中使用<br> 局部内部类不能包含静态变量</p>
+<p>创建实例内部类（前面没有什么修饰的类）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class Outter&#123;</span><br><span class="line">	class Inner&#123;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"> Outter out = new Outter();</span><br><span class="line">Outter.Inner <span class="keyword">in</span> = out. new Inner();  // 要创建外部类对象</span><br></pre></td></tr></table></figure>
+<p>有static修饰表示是类中的成员，可以直接访问</p>
+<h2 id="静态内部类（在内部类前面加上static）"><a href="#静态内部类（在内部类前面加上static）" class="headerlink" title="静态内部类（在内部类前面加上static）"></a>静态内部类（在内部类前面加上static）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Class Outter&#123;</span><br><span class="line">	static Class Inner&#123;</span><br><span class="line">	static String color = <span class="string">"black"</span>;</span><br><span class="line">	int age = 10;</span><br><span class="line">	void <span class="function"><span class="title">test</span></span>()&#123;</span><br><span class="line">	system.out.println(name );</span><br><span class="line">	system.out.println(new Outter().age);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Outter.Inner <span class="keyword">in</span> = new Outte.Innerr();</span><br></pre></td></tr></table></figure>
+<p>静态内部类中没有外部类的引用，但是可以访问外部类的静态成员<br>访问静态内部类的静态成员可以不用创建对象直接通过 “  . ”调用 如Outter.Inner.color，不需要创建外部类对象</p>
+<h2 id="局部内部类（定义在方法中的内部类）"><a href="#局部内部类（定义在方法中的内部类）" class="headerlink" title="局部内部类（定义在方法中的内部类）"></a>局部内部类（定义在方法中的内部类）</h2><p>不能使用一些修饰 public private。。。<br>只能在定义的方法中使用<br>局部内部类不能包含静态变量<br>局部内部类可以包含局部变量，使用局部变量的本质是final 常量（在方法区中）</p>
+<h2 id="匿名内部类（没有名字的局部内部类）"><a href="#匿名内部类（没有名字的局部内部类）" class="headerlink" title="匿名内部类（没有名字的局部内部类）"></a>匿名内部类（没有名字的局部内部类）</h2><p>匿名内部类必须要有父类或者实现接口之后才能使用<br>没有构造器<br>只使用一次的时候用匿名内部类<br>new  父类构造器 或 接口（）{<br>内部写的代码，在new的时候会自动执行<br>}</p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>表示一个事件的固定状态<br>JAVA中美剧是一个特殊的类<br>【修饰符】 enum 枚举的名称{<br>常量1，常量2，常量3.。。。<br>} //常量有下标，从0开始<br>在编译时会把构造器私有化，就不能创建对象了<br>可以用switch（int型）中，会自动转成int<br>例：</p>
+<pre><code class="bash">enim WeekDay{
+MONDAY,TUESDAY,WEDNENSDAY
+}
+
+</code></pre>
+<p>//Publiv static final WeekDay MONDAY;<br>使用时，直接WeekDay.MONDAY<br>WeekDay.values   //获取枚举当中所有元素，放到一个数组中</p>
+<p>public：被JVM调用的方法，他的权限要足够大<br>static：被JVM调用的方法，不需要创建对象，直接使用类名调用<br>Scanner要导包</p>
+<h4 id="从键盘录入数据"><a href="#从键盘录入数据" class="headerlink" title="从键盘录入数据"></a>从键盘录入数据</h4><p>Scanner sc = new Scanner(System.in); //等待从键盘录入一个数<br>i= sc.nextInt();</p>
+<h4 id="从键盘录入字符串"><a href="#从键盘录入字符串" class="headerlink" title="从键盘录入字符串"></a>从键盘录入字符串</h4><p>String str = sc.nextLine();</p>
+<p>java.lang包不需要导入<br>System.arraycopy(src,srcpos,dest,destpos,length); //数组复制<br>Array.toString(name)//获取全部内容<br>System.exit(0);正常退出 -1异常退出  //终止当前运行的java虚拟机<br>System.gc(); //垃圾运行回收器（立即运行垃圾回收器）一个对象并不是立马被回收 一般系统会自动调用<br>protected void finlize() throws Throeable {} // 当一个对象被垃圾回收时自动调用的方法 ‘</p>
+<h2 id="集合：存放数据的容器"><a href="#集合：存放数据的容器" class="headerlink" title="集合：存放数据的容器"></a>集合：存放数据的容器</h2><p>数组：长度固定，不能再去添加元素<br>java提供集合类：长度可以任意改变，能储存任意对象，长度随着元素的增加而增加</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>数组能存基本数据类型和引用数据类型<br>集合当中只能存引用数据类型，直接放，也会自动帮你装箱（把基本数据类型转成对象）<br>集合中只能存放对象</p>
+<p>元素个数固定，推荐使用数组，反之推荐使用集合<br>Collexction(接口)有两个子接口List(有序)(接口)和Set(无序)(接口)<br>List：ArrayList , LinkedList, Vector(实现类)<br>Set：HashSet， TreeSet</p>
 
       
     </div>
