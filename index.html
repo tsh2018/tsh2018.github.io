@@ -105,8 +105,17 @@
 <p>静态内部类中没有外部类的引用，但是可以访问外部类的静态成员<br>访问静态内部类的静态成员可以不用创建对象直接通过 “  . ”调用 如Outter.Inner.color，不需要创建外部类对象</p>
 <h2 id="局部内部类（定义在方法中的内部类）"><a href="#局部内部类（定义在方法中的内部类）" class="headerlink" title="局部内部类（定义在方法中的内部类）"></a>局部内部类（定义在方法中的内部类）</h2><p>不能使用一些修饰 public private。。。<br>只能在定义的方法中使用<br>局部内部类不能包含静态变量<br>局部内部类可以包含局部变量，使用局部变量的本质是final 常量（在方法区中）</p>
 <h2 id="匿名内部类（没有名字的局部内部类）"><a href="#匿名内部类（没有名字的局部内部类）" class="headerlink" title="匿名内部类（没有名字的局部内部类）"></a>匿名内部类（没有名字的局部内部类）</h2><p>匿名内部类必须要有父类或者实现接口之后才能使用<br>没有构造器<br>只使用一次的时候用匿名内部类<br>new  父类构造器 或 接口（）{<br>内部写的代码，在new的时候会自动执行<br>}</p>
-<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>表示一个事件的固定状态<br>JAVA中美剧是一个特殊的类<br>【修饰符】 enum 枚举的名称{<br>常量1，常量2，常量3.。。。<br>} //常量有下标，从0开始<br>在编译时会把构造器私有化，就不能创建对象了<br>可以用switch（int型）中，会自动转成int<br>例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">enim WeekDay&#123;</span><br><span class="line">MONDAY,TUESDAY,WEDNENSDAY</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line">//Publiv static final WeekDay MONDAY;</span><br><span class="line">使用时，直接WeekDay.MONDAY</span><br><span class="line">WeekDay.values   //获取枚举当中所有元素，放到一个数组中</span><br><span class="line"></span><br><span class="line">public：被JVM调用的方法，他的权限要足够大</span><br><span class="line">static：被JVM调用的方法，不需要创建对象，直接使用类名调用</span><br><span class="line">Scanner要导包</span><br><span class="line"></span><br><span class="line"><span class="comment">#### 从键盘录入数据</span></span><br><span class="line">Scanner sc = new Scanner(System.in); //等待从键盘录入一个数</span><br><span class="line">i= sc.nextInt();</span><br><span class="line"></span><br><span class="line"><span class="comment">#### 从键盘录入字符串</span></span><br><span class="line">String str = sc.nextLine();</span><br><span class="line"></span><br><span class="line">java.lang包不需要导入</span><br><span class="line">System.arraycopy(src,srcpos,dest,destpos,length); //数组复制</span><br><span class="line">Array.toString(name)//获取全部内容</span><br><span class="line">System.exit(0);正常退出 -1异常退出  //终止当前运行的java虚拟机</span><br><span class="line">System.gc(); //垃圾运行回收器（立即运行垃圾回收器）一个对象并不是立马被回收 一般系统会自动调用</span><br><span class="line">protected void finlize() throws Throeable &#123;&#125; // 当一个对象被垃圾回收时自动调用的方法 <span class="string">'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">## 集合：存放数据的容器</span></span><br><span class="line"><span class="string">数组：长度固定，不能再去添加元素</span></span><br><span class="line"><span class="string">java提供集合类：长度可以任意改变，能储存任意对象，长度随着元素的增加而增加</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">###  区别：</span></span><br><span class="line"><span class="string">数组能存基本数据类型和引用数据类型</span></span><br><span class="line"><span class="string">集合当中只能存引用数据类型，直接放，也会自动帮你装箱（把基本数据类型转成对象）</span></span><br><span class="line"><span class="string">集合中只能存放对象</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">元素个数固定，推荐使用数组，反之推荐使用集合 </span></span><br><span class="line"><span class="string">Collexction(接口)有两个子接口List(有序)(接口)和Set(无序)(接口)</span></span><br><span class="line"><span class="string">List：ArrayList , LinkedList, Vector(实现类)</span></span><br><span class="line"><span class="string">Set：HashSet， TreeSet</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">List当中可以添加重复元素 </span></span><br><span class="line"><span class="string">List当中add返回值都是true </span></span><br><span class="line"><span class="string">Set当中不能添加重复元素</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ArrayList() 数组，可以添加元素，且可以添加重复元素</span></span><br><span class="line"><span class="string">ArrayList()已经覆盖了toString 直接可以打印结果（有对象时打印的不再是对象的地址，而是对象的内容）</span></span><br><span class="line"><span class="string">#### 添加元素</span></span><br><span class="line"><span class="string">``` bash</span></span><br><span class="line"><span class="string">Collection c = new ArrayList(); //多态写法 运行时 表现子类的特征</span></span><br><span class="line"><span class="string">bollean b1 = c.add("abc");</span></span><br><span class="line"><span class="string">bollean b2 = c.add(10)//会自动帮你装箱（把基本数据类型转成对象）  //可用布尔类型看是否添加成功</span></span><br><span class="line"><span class="string">``` </span></span><br><span class="line"><span class="string">#### 从集合中移除指定元素</span></span><br><span class="line"><span class="string">``` bash</span></span><br><span class="line"><span class="string">c.remove("a");</span></span><br></pre></td></tr></table></figure>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>表示一个事件的固定状态<br>JAVA中美剧是一个特殊的类<br>【修饰符】 enum 枚举的名称{<br>常量1，常量2，常量3.。。。<br>} //常量有下标，从0开始<br>在编译时会把构造器私有化，就不能创建对象了<br>可以用switch（int型）中，会自动转成int<br>例：<br>enim WeekDay{<br>MONDAY,TUESDAY,WEDNENSDAY<br>}<br>//Publiv static final WeekDay MONDAY;<br>使用时，直接WeekDay.MONDAY<br>WeekDay.values   //获取枚举当中所有元素，放到一个数组中</p>
+<p>public：被JVM调用的方法，他的权限要足够大<br>static：被JVM调用的方法，不需要创建对象，直接使用类名调用<br>Scanner要导包</p>
+<h3 id="从键盘录入数据"><a href="#从键盘录入数据" class="headerlink" title="从键盘录入数据"></a>从键盘录入数据</h3><p>Scanner sc = new Scanner(System.in); //等待从键盘录入一个数<br>i= sc.nextInt();</p>
+<h3 id="从键盘录入字符串"><a href="#从键盘录入字符串" class="headerlink" title="从键盘录入字符串"></a>从键盘录入字符串</h3><p>String str = sc.nextLine();</p>
+<p>java.lang包不需要导入<br>System.arraycopy(src,srcpos,dest,destpos,length); //数组复制<br>Array.toString(name)//获取全部内容<br>System.exit(0);正常退出 -1异常退出  //终止当前运行的java虚拟机<br>System.gc(); //垃圾运行回收器（立即运行垃圾回收器）一个对象并不是立马被回收 一般系统会自动调用<br>protected void finlize() throws Throeable {} // 当一个对象被垃圾回收时自动调用的方法 </p>
+<h2 id="集合：存放数据的容器"><a href="#集合：存放数据的容器" class="headerlink" title="集合：存放数据的容器"></a>集合：存放数据的容器</h2><p>数组：长度固定，不能再去添加元素<br>java提供集合类：长度可以任意改变，能储存任意对象，长度随着元素的增加而增加</p>
+<h3 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h3><p>数组能存基本数据类型和引用数据类型<br>集合当中只能存引用数据类型，直接放，也会自动帮你装箱（把基本数据类型转成对象）<br>集合中只能存放对象</p>
+<p>元素个数固定，推荐使用数组，反之推荐使用集合<br>Collexction(接口)有两个子接口List(有序)(接口)和Set(无序)(接口)<br>List：ArrayList , LinkedList, Vector(实现类)<br>Set：HashSet， TreeSet</p>
+<p>List当中可以添加重复元素<br>List当中add返回值都是true<br>Set当中不能添加重复元素</p>
+<p>ArrayList() 数组，可以添加元素，且可以添加重复元素<br>ArrayList()已经覆盖了toString 直接可以打印结果（有对象时打印的不再是对象的地址，而是对象的内容）</p>
+<h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Collection c = new ArrayList(); //多态写法 运行时 表现子类的特征</span><br><span class="line">bollean b1 = c.add(<span class="string">"abc"</span>);</span><br><span class="line">bollean b2 = c.add(10)//会自动帮你装箱（把基本数据类型转成对象）  //可用布尔类型看是否添加成功</span><br><span class="line">``` </span><br><span class="line"><span class="comment">#### 从集合中移除指定元素</span></span><br><span class="line">``` bash</span><br><span class="line">c.remove(<span class="string">"a"</span>);</span><br></pre></td></tr></table></figure>
 <h4 id="清空集合中的所有内容"><a href="#清空集合中的所有内容" class="headerlink" title="清空集合中的所有内容"></a>清空集合中的所有内容</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.clear();</span><br></pre></td></tr></table></figure>
 <h4 id="判断一个集合是否为空"><a href="#判断一个集合是否为空" class="headerlink" title="判断一个集合是否为空"></a>判断一个集合是否为空</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.isEmpty()</span><br></pre></td></tr></table></figure>
 <h4 id="获取集合长度"><a href="#获取集合长度" class="headerlink" title="获取集合长度"></a>获取集合长度</h4><pre><code class="bash">c.size();
@@ -116,7 +125,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/24/Summarize/" data-id="cjzs7fajv0006xku5spceo4ay" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/24/Summarize/" data-id="cjzs7krf40003jku53eqte781" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/02/REPORT-0/" data-id="cjzs7fajv0003xku5h1t81pq2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/02/REPORT-0/" data-id="cjzs7krf00001jku5cuu9dwdx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/13/Report/" data-id="cjzs7fajt0002xku5as1neb1p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/04/13/Report/" data-id="cjzs7krf80005jku5lpnh2bmk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/28/vocation-report/" data-id="cjzs7fakd0008xku5iqg0unp3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/28/vocation-report/" data-id="cjzs7krfv0008jku5pmsd52cj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,7 +281,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/04/Third-Report/" data-id="cjzs7fajv0004xku5b40jktda" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/04/Third-Report/" data-id="cjzs7krfe0007jku5tca9p290" class="article-share-link">Share</a>
       
       
     </footer>
@@ -314,7 +323,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/14/Second-Report/" data-id="cjzs7fajv0005xku5py3pva3i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/14/Second-Report/" data-id="cjzs7krf60004jku5am7s3c9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -355,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/30/First-Report/" data-id="cjzs7fajl0000xku5fia29pud" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/30/First-Report/" data-id="cjzs7krf20002jku5gs6infqj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -392,7 +401,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/30/My-first-blog/" data-id="cjzs7fajl0001xku5bw7re8jr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/30/My-first-blog/" data-id="cjzs7kret0000jku5hkzynik9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -437,7 +446,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/21/hello-world/" data-id="cjzs7fajv0007xku5w6jdinwp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/21/hello-world/" data-id="cjzs7krfb0006jku5nfcdq8a6" class="article-share-link">Share</a>
       
       
     </footer>
