@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Farmers&#39; Yard">
 <meta property="og:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-26T09:37:22.939Z">
+<meta property="og:updated_time" content="2019-08-26T09:40:19.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summarize">
 <meta name="twitter:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
@@ -107,7 +107,8 @@
 <p>静态内部类中没有外部类的引用，但是可以访问外部类的静态成员<br>访问静态内部类的静态成员可以不用创建对象直接通过 “  . ”调用 如Outter.Inner.color，不需要创建外部类对象</p>
 <h2 id="局部内部类（定义在方法中的内部类）"><a href="#局部内部类（定义在方法中的内部类）" class="headerlink" title="局部内部类（定义在方法中的内部类）"></a>局部内部类（定义在方法中的内部类）</h2><p>不能使用一些修饰 public private。。。<br>只能在定义的方法中使用<br>局部内部类不能包含静态变量<br>局部内部类可以包含局部变量，使用局部变量的本质是final 常量（在方法区中）</p>
 <h2 id="匿名内部类（没有名字的局部内部类）"><a href="#匿名内部类（没有名字的局部内部类）" class="headerlink" title="匿名内部类（没有名字的局部内部类）"></a>匿名内部类（没有名字的局部内部类）</h2><p>匿名内部类必须要有父类或者实现接口之后才能使用<br>没有构造器<br>只使用一次的时候用匿名内部类<br>new  父类构造器 或 接口（）{<br>内部写的代码，在new的时候会自动执行<br>}</p>
-<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>表示一个事件的固定状态<br>JAVA中美剧是一个特殊的类<br>【修饰符】 enum 枚举的名称{<br>常量1，常量2，常量3.。。。<br>} //常量有下标，从0开始<br>在编译时会把构造器私有化，就不能创建对象了<br>可以用switch（int型）中，会自动转成int<br>例：<br>enim WeekDay{<br>MONDAY,TUESDAY,WEDNENSDAY<br>}<br>//Publiv static final WeekDay MONDAY;<br>使用时，直接WeekDay.MONDAY<br>WeekDay.values   //获取枚举当中所有元素，放到一个数组中</p>
+<h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><p>表示一个事件的固定状态<br>JAVA中美剧是一个特殊的类<br>【修饰符】 enum 枚举的名称{<br>常量1，常量2，常量3.。。。<br>} //常量有下标，从0开始<br>在编译时会把构造器私有化，就不能创建对象了<br>可以用switch（int型）中，会自动转成int<br>例：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">enim WeekDay&#123;</span><br><span class="line">MONDAY,TUESDAY,WEDNENSDAY</span><br><span class="line">&#125;</span><br><span class="line">//Publiv static final WeekDay MONDAY;</span><br></pre></td></tr></table></figure></p>
+<p>使用时，直接WeekDay.MONDAY<br>WeekDay.values   //获取枚举当中所有元素，放到一个数组中</p>
 <p>public：被JVM调用的方法，他的权限要足够大<br>static：被JVM调用的方法，不需要创建对象，直接使用类名调用<br>Scanner要导包</p>
 <h3 id="从键盘录入数据"><a href="#从键盘录入数据" class="headerlink" title="从键盘录入数据"></a>从键盘录入数据</h3><p>Scanner sc = new Scanner(System.in); //等待从键盘录入一个数<br>i= sc.nextInt();</p>
 <h3 id="从键盘录入字符串"><a href="#从键盘录入字符串" class="headerlink" title="从键盘录入字符串"></a>从键盘录入字符串</h3><p>String str = sc.nextLine();</p>
