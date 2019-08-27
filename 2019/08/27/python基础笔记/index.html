@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>python基础笔记 | Farmers&#39; Yard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python基础笔记">
+<meta property="og:url" content="http://yoursite.com/2019/08/27/python基础笔记/index.html">
+<meta property="og:site_name" content="Farmers&#39; Yard">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102#">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-27T09:36:14.350Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python基础笔记">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102#">
+  
+    <link rel="alternate" href="/atom.xml" title="Farmers&#39; Yard" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Farmers&#39; Yard</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python基础笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/27/python基础笔记/" class="article-date">
+  <time datetime="2019-08-27T09:34:24.000Z" itemprop="datePublished">2019-08-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python基础笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Hello world"</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">''</span><span class="string">'  </span></span><br><span class="line"><span class="string">多行注释</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"><span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">多行注释</span></span><br><span class="line"><span class="string">"</span><span class="string">""</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">"Python入门及注释"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Python 文件后缀</span></span><br><span class="line"><span class="comment"># .py 我们经常用的脚本文件</span></span><br><span class="line"><span class="comment"># .pyc 临时文件</span></span><br><span class="line"><span class="comment"># .pyw 开发纯图形化界面程序文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Python严格区分大小写</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># id() 查看地址</span></span><br><span class="line">age = 18</span><br><span class="line"><span class="built_in">print</span>(age, id(age))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 内容的个数必须和变量个数相同</span></span><br><span class="line">name, age, sex = <span class="string">"rose"</span>, 18, <span class="string">"women"</span></span><br><span class="line"><span class="built_in">print</span>(name, age, sex)</span><br><span class="line"></span><br><span class="line"><span class="comment"># * 可以看做一个垃圾站， 接收没人要的值</span></span><br><span class="line">a, *b, c = 1, 2, 3, 4, 5, 6, 7, 8, 9</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="built_in">print</span>(c)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 系统默认基本数据类型</span></span><br><span class="line"><span class="string">""</span><span class="string">"</span></span><br><span class="line"><span class="string">1. Number  数值类型</span></span><br><span class="line"><span class="string">int 0~9</span></span><br><span class="line"><span class="string">float   a = -3.141592653 b = -3141592653e-9 科学计数法</span></span><br><span class="line"><span class="string">bool  true false</span></span><br><span class="line"><span class="string">complex(复数)  一个数的平方为-1  i-&gt;j</span></span><br><span class="line"><span class="string">a = 实数 + 虚数（j）"</span><span class="string">""</span></span><br><span class="line">b = 1 + 0j</span><br><span class="line">c = 1 + 3j</span><br><span class="line"><span class="built_in">print</span>(b, <span class="built_in">type</span>(b))  <span class="comment"># type() 查看一个变量的数据类型</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">2. String  字符类型</span></span><br><span class="line"><span class="string">单引号 a = '</span>hello<span class="string">'</span></span><br><span class="line"><span class="string">双引号 a = "hello"</span></span><br><span class="line"><span class="string">三引号 a = """hello"""  可以换行输出</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">str1 = <span class="string">'金星说："人不犯我，我不犯人.人若犯我，忍让三分.人若再犯,斩草除根"'</span></span><br><span class="line"><span class="built_in">print</span>(str1, <span class="built_in">type</span>(str1))</span><br><span class="line">str2 = <span class="string">""</span><span class="string">"金星说：人不犯我，我不犯人.</span></span><br><span class="line"><span class="string">人若犯我，忍让三分.</span></span><br><span class="line"><span class="string">人若再犯，斩草除根"</span><span class="string">""</span></span><br><span class="line"><span class="built_in">print</span>(str2, <span class="built_in">type</span>(str2), )</span><br><span class="line">str3 = <span class="string">'金星说："人不犯我，我不犯人.\n人若犯我，忍让三分.\n人若再犯,斩草除根"'</span></span><br><span class="line"><span class="built_in">print</span>(str3, <span class="built_in">type</span>(str3))</span><br><span class="line"><span class="comment"># str3 与 str2 等效</span></span><br><span class="line"><span class="comment"># \表示转义 把后边的字母转成有特殊含义的</span></span><br><span class="line">a = <span class="string">"D:\兄弟连\代码\\ew"</span></span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line">b = <span class="string">"\\\\\n"</span></span><br><span class="line"><span class="built_in">print</span>(b)</span><br><span class="line"><span class="comment"># r代表元字符 后面字符串按照原内容输出</span></span><br><span class="line">b1 = r<span class="string">"\\\\\\n"</span></span><br><span class="line"><span class="built_in">print</span>(b1)</span><br><span class="line">str4 = <span class="string">"金星说：\"人不犯我，我不犯人.人若犯我，忍让三分.人若再犯,斩草除根.\""</span></span><br><span class="line"><span class="built_in">print</span>(str4)</span><br><span class="line"><span class="comment"># \' 单引号</span></span><br><span class="line"><span class="comment"># \" 双引号</span></span><br><span class="line"><span class="comment"># \r 回车</span></span><br><span class="line"><span class="comment"># \f 换页</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">3. List    列表类型</span></span><br><span class="line"><span class="string">就是一系列数据的顺序组合，并且组合之后可以修改 标识符：[]</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">a = [1, 2, 3]</span><br><span class="line"><span class="built_in">print</span>(a, <span class="built_in">type</span>(a))</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">4. tuple   元祖类型</span></span><br><span class="line"><span class="string">一系列数据的顺序组合，并且组合之后不可以修改 标识符：()</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">a = (1, 2, 3)</span><br><span class="line"><span class="built_in">print</span>(a, <span class="built_in">type</span>(a))</span><br><span class="line"><span class="comment"># 定义空元祖</span></span><br><span class="line"><span class="comment"># a = ()</span></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">5. dict    字典类型</span></span><br><span class="line"><span class="string">具有键值映射关系的一组无序顺序的组合，可以修改 标识符：&#123;&#125;</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">a = &#123;<span class="string">"a"</span>: 1, <span class="string">"b"</span>: 2, <span class="string">"c"</span>: 3&#125;</span><br><span class="line"><span class="built_in">print</span>(a, <span class="built_in">type</span>(a))</span><br><span class="line">a = &#123;&#125;</span><br><span class="line"><span class="built_in">print</span>(a, <span class="built_in">type</span>(a))</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">6. set     集合类型</span></span><br><span class="line"><span class="string">一组特定数据的无序集合 所有数据不会重复 标识符：无</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line">a = &#123;1, 2, 3, 4, 5&#125;</span><br><span class="line"><span class="built_in">print</span>(a, <span class="built_in">type</span>(a))</span><br><span class="line">b = <span class="built_in">set</span>()</span><br><span class="line"><span class="built_in">print</span>(b, <span class="built_in">type</span>(b))</span><br></pre></td></tr></table></figure>
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>F:\python\venv\Scripts\python.exe F:/python/语法基础.py<br>Hello world<br>Python入门及注释<br>18 2006549136<br>rose 18 women<br>1<br>[2, 3, 4, 5, 6, 7, 8]<br>9<br>(1+0j) <class 'complex'=""><br>金星说：”人不犯我，我不犯人.人若犯我，忍让三分.人若再犯,斩草除根” <class 'str'=""><br>金星说：人不犯我，我不犯人.<br>人若犯我，忍让三分.<br>人若再犯，斩草除根 <class 'str'=""><br>金星说：”人不犯我，我不犯人.<br>人若犯我，忍让三分.<br>人若再犯,斩草除根” <class 'str'=""><br>D:\兄弟连\代码\ew<br>\</class></class></class></class></p>
+<p>\\\n<br>金星说：”人不犯我，我不犯人.人若犯我，忍让三分.人若再犯,斩草除根.”<br>[1, 2, 3] <class 'list'=""><br>(1, 2, 3) <class 'tuple'=""><br>{‘a’: 1, ‘b’: 2, ‘c’: 3} <class 'dict'=""><br>{} <class 'dict'=""><br>{1, 2, 3, 4, 5} <class 'set'=""><br>set() <class 'set'=""></class></class></class></class></class></class></p>
+<p>Process finished with exit code 0</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/27/python基础笔记/" data-id="cjztmyq6e0005jku522jxkdxg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/24/Summarize/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Summarize</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/27/python基础笔记/">python基础笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/24/Summarize/">Summarize</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/02/REPORT-0/">report</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/13/Report/">Report</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/28/vocation-report/">vocation report</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
