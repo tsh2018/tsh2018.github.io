@@ -10,11 +10,11 @@
   <meta name="description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Summarize">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/Summarize/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/Java基础/index.html">
 <meta property="og:site_name" content="Farmers&#39; Yard">
 <meta property="og:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-26T09:40:19.105Z">
+<meta property="og:updated_time" content="2019-08-30T16:52:42.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Summarize">
 <meta name="twitter:description" content="多态把子类对象赋值给父类类型，多态运行时还是表现子类特征编译时看左边，运行时看右边 1234class mon&amp;#123;private moon（）&amp;#123;&amp;#125; //将构造器私有化就可以不能创建对象............&amp;#125; 单例设计模式单例：一个类在内存中只有一个对象，别人不能再去创建对象1.必须在该类中创建一个对象、2.私有化自己的构造器，防止外界通过构造器来创建新的对">
@@ -64,9 +64,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="article-Summarize" class="article article-type-article" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="article-Java基础" class="article article-type-article" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/24/Summarize/" class="article-date">
+    <a href="/2019/08/24/Java基础/" class="article-date">
   <time datetime="2019-08-24T08:12:20.000Z" itemprop="datePublished">2019-08-24</time>
 </a>
     
@@ -123,12 +123,89 @@
 <h4 id="判断一个集合是否为空"><a href="#判断一个集合是否为空" class="headerlink" title="判断一个集合是否为空"></a>判断一个集合是否为空</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c.isEmpty()</span><br></pre></td></tr></table></figure>
 <h4 id="获取集合长度"><a href="#获取集合长度" class="headerlink" title="获取集合长度"></a>获取集合长度</h4><pre><code class="bash">c.size();
 </code></pre>
-<p>集合的遍历；<br>1.把集合转成数组，遍历数组，<br>Object[] arr = c.toArray() //返回的是Object类型</p>
+<h3 id="集合的遍历；"><a href="#集合的遍历；" class="headerlink" title="集合的遍历；"></a>集合的遍历；</h3><h4 id="1-把集合转成数组，遍历数组，"><a href="#1-把集合转成数组，遍历数组，" class="headerlink" title="1.把集合转成数组，遍历数组，"></a>1.把集合转成数组，遍历数组，</h4><p>Object[] arr = c.toArray() //返回的是Object类型</p>
+<h4 id="2-迭代器遍历"><a href="#2-迭代器遍历" class="headerlink" title="2.迭代器遍历"></a>2.迭代器遍历</h4><p>c.iterator<t> it = c.iterator(); //获取迭代器中的内容<br>Object obj = it.next(); //把当前游标中的内容取出来，当前游标往后走一位<br>……<br>//判断迭代器是否有元素 有为true<br>boolean res = it.hasNext();</t></p>
+<p>一般</p>
+<pre><code class="bash"><span class="keyword">while</span>（it.hasNext()）{
+  system.out.println(it.next());
+}
+
+Collection c2 = new ArrayList();
+c2.add(new Cat(<span class="string">"mini"</span>));
+c2.add(new Cat(<span class="string">"mm"</span>));
+
+Iterator it = c2.iterator();  //里面的对象会自动变为object而不是Cat
+<span class="keyword">while</span>（it.hasNext()）{
+  //system.out.println(it.next());
+Cat c = (Cat)it.naxt();
+c.show();  Object中没有show()方法，因此要转成Cat型
+}
+</code></pre>
+<p>ArrayList 数组<br>LinkList 链表<br>Vector 数组<br>HashSet Hash算法<br>TreeSet 二叉树</p>
+<h4 id="2-把c2中所有元素合并到c1中"><a href="#2-把c2中所有元素合并到c1中" class="headerlink" title="2.把c2中所有元素合并到c1中"></a>2.把c2中所有元素合并到c1中</h4><p>c1.addAll(c2)</p>
+<h4 id="3-删除两个集合点交集"><a href="#3-删除两个集合点交集" class="headerlink" title="3.删除两个集合点交集"></a>3.删除两个集合点交集</h4><p>c1.removeAll(c2)</p>
+<h4 id="4-判断调用的集合是否全部包含传入的集合"><a href="#4-判断调用的集合是否全部包含传入的集合" class="headerlink" title="4.判断调用的集合是否全部包含传入的集合"></a>4.判断调用的集合是否全部包含传入的集合</h4><p>boolean res = c1.containsAll（c2）</p>
+<h4 id="5-把两个的交集赋值给调用者"><a href="#5-把两个的交集赋值给调用者" class="headerlink" title="5.把两个的交集赋值给调用者"></a>5.把两个的交集赋值给调用者</h4><p>c1.retainAll(c2) c1变为交集<br>boolean b = c1.retainAll(c2) 集合改变了为true，未改变为flase</p>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>List list = new ArrayList（）；<br>list.add(“a”);<br>//list是有角标<br>list.add(1, “b”)  //在角标为1的位置内容为b  index必须要《=size（当前的）<br>//获取指定角标的元素<br>list.get(index);<br>for(i = 0; i &lt;lidt.size(); i++)<br>{<br>list.get(i);<br>。。。。<br>} </p>
+<h4 id="删除指定元素"><a href="#删除指定元素" class="headerlink" title="删除指定元素"></a>删除指定元素</h4><p>List it = new ArrayList（）；<br>list.add(“1”);<br>list.add(“2”);<br>list.add(“3”);<br>while(it.hasNext())<br>{<br>//取出对应元素<br>String str = （String）it.next();<br>if(str.equals(“2”))<br>{<br> // list.remove(“2”)  //在迭代集合的过程中，是不允许直接修改集合结构，添加也是<br>//删除时可以使用迭代器中的删除<br>it.remove();  //删除当前正在迭代集合的元素（正在遍历元素next） 也会把list中的也删掉<br>}<br>}</p>
+<p>//list当中有自己特有的迭代器<br>ListIterator it = list.listIyerator();   //注意大小写</p>
+<p>//去除集合中的重复元素</p>
+<pre><code class="bash">ArrayList newList = new ArrayList（）；
+ListTterator it = list.List.listerator();
+<span class="keyword">while</span>(it.hasNext())
+{
+Object obj = it.next();
+<span class="keyword">if</span>(！newList.contains(obj)){ //contain在对象是判断地址
+newList.add(obj);
+}
+</code></pre>
+<p>//做对象的对比，不想让其对比地址，必须得覆盖equals  根据自己的需求来定义什么时候相等   在Source里面有帮助生成方法覆盖<br>}</p>
+<p>LinkedList<br>LinkedList list = new LinkedList();<br>list.add(“a”);<br>list.add(“b”);<br>list.add(“c”);<br>/<em>ListerIterator it = list.listIterator();<br>…..</em>/<br>//特有<br>list.addFirst();<br>list.daaLast();<br>list.removeFirst();<br>list.removeLast();<br>list.get(index); \</p>
+<p>LinkedList linkedList;<br>class Stack(){<br>linkedList = new LinkedList();<br>}</p>
+<h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><p>//入栈，在集合最后添加一个元素<br>void push(Object obj){<br>linkedList.addLast(obj);<br>}<br>//出栈，把集合当中最后一个元素移除</p>
+<p>void pop(){<br>linkedList.removeLast();<br>}</p>
+<p>Stack s = new Stack();<br>s.push(“a”);<br>s.push(“b”);<br>s.push(“c”);<br>s.pop();</p>
+<p>Vector<br>Vector vc = new Vector();<br>vc.add(“a”);<br>vc.add(“b”);<br>//从1.2并到ArrayList中</p>
+<h2 id="泛型：一开始还不是什么类型-，在使用的时，才能确定是什么类型。"><a href="#泛型：一开始还不是什么类型-，在使用的时，才能确定是什么类型。" class="headerlink" title="泛型：一开始还不是什么类型 ，在使用的时，才能确定是什么类型。"></a>泛型：一开始还不是什么类型 ，在使用的时，才能确定是什么类型。</h2><p>1.再开始定义的时候，留一个插口<br>2.在创建对象的时候，再去插入对应的类型<br>class Point<t>{<br>//1.可以是字符串类型 2.Intrger 3.Double<br>T x;<br>T y;<br>}<br>//定义时分为两步<br>//1.在类的后面<t>     T: 代表不确定的类型，在创建对象的时候，才确定是什么类型  T必须为引用类型</t></t></p>
+<p>//创建对象的时候，声明泛型是什么类型，如果没有声明，就是Object（传入的值可以是任何类型，但是不稳定）<br>Point<string> p = new Point<string>();<br>p.x = “20”;<br>p.y = “2”  //只能传入String类型</string></string></p>
+<p>集合中也可以用泛型</p>
+<p>###泛型注意点<br>1.泛型前后类型必须保持一致  //ArrayList<interage> list = new ArrayList<string>()  错误<br>2.从JAVA7开始，后面的类型可以不写 new ArrayList&lt;&gt;(); 菱形语法<br>3.泛型是没有继承 // ArrayList<object> list = new ArrayList<string>();<br>4.泛型其实是语法糖（本质还是Object类型，内部还是会强制转换）</string></object></string></interage></p>
+<h3 id="1-泛型类-：在类上面定义的泛型，在创建对象时，要指明泛型类型，T只能用在普通方法上面，不能使用在静态方法上面（静态方法时直接使用类名调用，泛型是在创建对象的时候才去指定类型）"><a href="#1-泛型类-：在类上面定义的泛型，在创建对象时，要指明泛型类型，T只能用在普通方法上面，不能使用在静态方法上面（静态方法时直接使用类名调用，泛型是在创建对象的时候才去指定类型）" class="headerlink" title="1.泛型类 ：在类上面定义的泛型，在创建对象时，要指明泛型类型，T只能用在普通方法上面，不能使用在静态方法上面（静态方法时直接使用类名调用，泛型是在创建对象的时候才去指定类型）"></a>1.泛型类 ：在类上面定义的泛型，在创建对象时，要指明泛型类型，T只能用在普通方法上面，不能使用在静态方法上面（静态方法时直接使用类名调用，泛型是在创建对象的时候才去指定类型）</h3><p>class Test<t>{<br>     T name;<br>     public T getNmae(){<br>           return name; / /构造器<br>}<br>}</t></p>
+<p>Test<string> t = new Test<string>();</string></string></p>
+<h3 id="2-泛型方法：就是在方法上面添加了泛型"><a href="#2-泛型方法：就是在方法上面添加了泛型" class="headerlink" title="2.泛型方法：就是在方法上面添加了泛型"></a>2.泛型方法：就是在方法上面添加了泛型</h3><pre><code class="bash">class Student{
+//泛型方法
+//方法当中定义的泛型，实在使用方法时，参数传递确定具体是什么leix
+//方法想要单独使用泛型，必须得有参数才有意义
+     &lt;T&gt; void <span class="built_in">test</span>(T a){}
+//静态方法也可以自定义泛型
+static &lt;E&gt; void test2(E name){
+System.out.printIn(name.getClass())}  //获取name的真实类型
+}
+static &lt;E&gt; E test2(E name){
+System.out.printIn(name.getClass())}  //获取name的真实类型
+<span class="built_in">return</span> E;
+}
+
+new Student().<span class="built_in">test</span>(XXX);  //XXX是什么类型，text方法中的T就是什么类型
+new Student().test2(XXX);
+</code></pre>
+<h3 id="通配符：不知道使用什么类型来接收时，可以使用？表示未知"><a href="#通配符：不知道使用什么类型来接收时，可以使用？表示未知" class="headerlink" title="通配符：不知道使用什么类型来接收时，可以使用？表示未知"></a>通配符：不知道使用什么类型来接收时，可以使用？表示未知</h3><p>只用来接收使用！</p>
+<pre><code class="bash">static void <span class="built_in">test</span>(List&lt;?&gt; list){}
+List&lt;Interage&gt; list = new ArrayLIst&lt;&gt;();
+</code></pre>
+<h3 id="泛型的上限：用来限定元素的类型必须得指定类型（Number）的子类，或者指定类型的类"><a href="#泛型的上限：用来限定元素的类型必须得指定类型（Number）的子类，或者指定类型的类" class="headerlink" title="泛型的上限：用来限定元素的类型必须得指定类型（Number）的子类，或者指定类型的类"></a>泛型的上限：用来限定元素的类型必须得指定类型（Number）的子类，或者指定类型的类</h3><p>static void test(List&lt;? extends Number&gt; list){}<br>泛型的xia限：用来限定元素的类型必须得指定类型（Number）的父类，或者指定的类<br>static void test(List&lt;? super Number&gt; list){}</p>
+<h3 id="泛型中的擦除：把泛型给去掉"><a href="#泛型中的擦除：把泛型给去掉" class="headerlink" title="泛型中的擦除：把泛型给去掉"></a>泛型中的擦除：把泛型给去掉</h3><pre><code class="bash">List&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add(<span class="string">"aa"</span>);
+
+List list2 = null;
+list2 = list;  //赋值给没有泛型的集合会把list当中的泛型给擦除掉
+list2.add(10) //此时是允许的
+</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/24/Summarize/" data-id="cjztmyq670002jku5membogbf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/24/Java基础/" data-id="cjzycvubp0000s8u503q9slq1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -190,7 +267,7 @@
           </li>
         
           <li>
-            <a href="/2019/08/24/Summarize/">Summarize</a>
+            <a href="/2019/08/24/Java基础/">Summarize</a>
           </li>
         
           <li>
