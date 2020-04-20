@@ -86,7 +86,7 @@
       
         <p><del>Linux</del><br>date –help 查看信息<br>man -k command 查看帮助</p>
 <hr>
-<p>regin { ### 目录板块：<br>rmdir -p 子目录删除后如果其父目录为空，将其父目录也删除,，使用时不能在父目录中，不然只会删除需要删除的目录，不会删除父目录<br>rmdir 目录名 可直接删除（为空时）<br>mkdir -p 创建的目录（name） 创建完整的目录结构，可指定目录的下级<br>mkdir -m 设置权限<br>}</p>
+<h3 id="目录板块："><a href="#目录板块：" class="headerlink" title="目录板块："></a>目录板块：</h3><p>rmdir -p 子目录删除后如果其父目录为空，将其父目录也删除,，使用时不能在父目录中，不然只会删除需要删除的目录，不会删除父目录<br>rmdir 目录名 可直接删除（为空时）<br>mkdir -p 创建的目录（name） 创建完整的目录结构，可指定目录的下级<br>mkdir -m 设置权限</p>
 <hr>
 <h3 id="文件板块"><a href="#文件板块" class="headerlink" title="文件板块"></a>文件板块</h3><h6 id="touch-建立文件"><a href="#touch-建立文件" class="headerlink" title="touch  建立文件"></a>touch  建立文件</h6><p>cp [option] 被复制的文件 复制的文件路径[及名字] 不希望重新命名是，可以直接写路径</p>
 <ul>
@@ -111,32 +111,34 @@
 <h6 id="find-option-filename"><a href="#find-option-filename" class="headerlink" title="find [option] filename"></a>find [option] filename</h6><p>其中，寻找条件可以用逻辑运算符组成 -a(and) -o(or) !(not)<br>-name  ‘字串’  查找文件名匹配所给字串的所有文件，可用*等通配符<br>-lname 链接文件<br>-gid n 查找属于id号为n的用户组的所有文件<br>-uid n 属于用户<br>-group string 查找属于用户组为所给字符串的用户组的所有文件<br>-user string 用户名<br>-empty 查找大小为0<br>-path string 路径</p>
 <h6 id="grep-option-search-pattern-file1-file2-…"><a href="#grep-option-search-pattern-file1-file2-…" class="headerlink" title="grep [option] [search pattern] [file1,file2,…]"></a>grep [option] [search pattern] [file1,file2,…]</h6><p>-b 会显示出现关键字的位置及该行内容<br>-c 显示匹配行的数量<br>-n 显示满足条件的行的在原文本的行号 首行为1<br>-v 输出不包含指定模式的所有行<br>-l 显示首次匹配串所在的文件名并用换行符隔开，一个文件只出现一次</p>
 <hr>
-<h3 id="用户，用户组板块"><a href="#用户，用户组板块" class="headerlink" title="用户，用户组板块"></a>用户，用户组板块</h3><p>useradd +名字<br>-g 指定用户组<br>userdel -r +名字 删除用户 一般用-r表示同时删除用户的主目录<br>usermod -g 修改用户所有组<br>groupadd<br>groupmod -o 修改用户组名字</p>
-<p>chown 用户名 文件名 改变文件的所有者<br>改变目录的所属用户，对目录下的文件没有影响，但是若想全部改变 可用-R参数</p>
-<p>chgrp 用户组 文件名 改变文件所有组ps<br>参数-R表示全改</p>
-<p>chmod 改变访问权限(读，写，可执行)<br>例  chmod 777 a.txt</p>
-<p>lsattr 查看文件属性<br>-R 递归显示所有文件属性</p>
-<p>cut option 【file】 截取（都会自动截取每行）会改变文件<br>-c 以字符为单位截取<br>-b 字节<br>-f 域 通常和-d放在一起用， -d设置默认间隔符，-f设置域的位置<br>date | cut -c 15-19</p>
-<p>comm文本比较  第一列显示第一个文本中独有的行 第二列显示第二个文本中独有的行 第三列显示共有的行</p>
-<p>nl filename 为文本创建行号 </p>
-<hr>
-<p>awk 文本分析工具<br>awk ‘/匹配的内容/ {需要的命令}’ file<br>awk ‘{print $1} ‘ one  输出第一列<br>$0 所有列<br>print NR 输出行数<br>NF 显示所有列数 一个字符串算一列<br>-F 指定间隔符<br>awk -F: ‘{print $1} ‘ one</p>
+<h3 id="用户，用户组板块"><a href="#用户，用户组板块" class="headerlink" title="用户，用户组板块"></a>用户，用户组板块</h3><h6 id="useradd-名字"><a href="#useradd-名字" class="headerlink" title="useradd +名字"></a>useradd +名字</h6><p>-g 指定用户组<br>userdel -r +名字 删除用户 一般用-r表示同时删除用户的主目录<br>usermod -g 修改用户所有组<br>groupadd<br>groupmod -o 修改用户组名字</p>
+<h6 id="chown-用户名-文件名-改变文件的所有者"><a href="#chown-用户名-文件名-改变文件的所有者" class="headerlink" title="chown 用户名 文件名 改变文件的所有者"></a>chown 用户名 文件名 改变文件的所有者</h6><p>改变目录的所属用户，对目录下的文件没有影响，但是若想全部改变 可用-R参数</p>
+<h6 id="chgrp-用户组-文件名-改变文件所有组ps"><a href="#chgrp-用户组-文件名-改变文件所有组ps" class="headerlink" title="chgrp 用户组 文件名 改变文件所有组ps"></a>chgrp 用户组 文件名 改变文件所有组ps</h6><p>参数-R表示全改</p>
+<h6 id="chmod-改变访问权限-读，写，可执行"><a href="#chmod-改变访问权限-读，写，可执行" class="headerlink" title="chmod 改变访问权限(读，写，可执行)"></a>chmod 改变访问权限(读，写，可执行)</h6><p>例  chmod 777 a.txt</p>
+<h6 id="lsattr-查看文件属性"><a href="#lsattr-查看文件属性" class="headerlink" title="lsattr 查看文件属性"></a>lsattr 查看文件属性</h6><p>-R 递归显示所有文件属性</p>
+<h6 id="cut-option-【file】-截取（都会自动截取每行）会改变文件"><a href="#cut-option-【file】-截取（都会自动截取每行）会改变文件" class="headerlink" title="cut option 【file】 截取（都会自动截取每行）会改变文件"></a>cut option 【file】 截取（都会自动截取每行）会改变文件</h6><p>-c 以字符为单位截取<br>-b 字节<br>-f 域 通常和-d放在一起用， -d设置默认间隔符，-f设置域的位置<br>date | cut -c 15-19</p>
+<h6 id="comm文本比较-第一列显示第一个文本中独有的行-第二列显示第二个文本中独有的行-第三列显示共有的行"><a href="#comm文本比较-第一列显示第一个文本中独有的行-第二列显示第二个文本中独有的行-第三列显示共有的行" class="headerlink" title="comm文本比较  第一列显示第一个文本中独有的行 第二列显示第二个文本中独有的行 第三列显示共有的行"></a>comm文本比较  第一列显示第一个文本中独有的行 第二列显示第二个文本中独有的行 第三列显示共有的行</h6><h6 id="nl-filename-为文本创建行号"><a href="#nl-filename-为文本创建行号" class="headerlink" title="nl filename 为文本创建行号"></a>nl filename 为文本创建行号</h6><hr>
+<h6 id="awk-文本分析工具"><a href="#awk-文本分析工具" class="headerlink" title="awk 文本分析工具"></a>awk 文本分析工具</h6><p>awk ‘/匹配的内容/ {需要的命令}’ file<br>awk ‘{print $1} ‘ one  输出第一列<br>$0 所有列<br>print NR 输出行数<br>NF 显示所有列数 一个字符串算一列<br>-F 指定间隔符<br>awk -F: ‘{print $1} ‘ one</p>
 <p>#!/bin/bash</p>
 <hr>
-<p>ps 显示进程<br>只输ps，只会显示当前用户正在运行的进程信息，不会显示进程状态<br>PID（进程ID） TTY（控制终端名称）TIME（消耗CPU总时间和） CMD（正在被执行的命令的名称）<br>j 以任务格式显示进程状态<br>ax 显示所有进程</p>
-<p>e 显示所有进程 包括守护进程<br>aux 显示所有用户进程</p>
-<p>kill命令 终止进程</p>
+<h3 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h3><h6 id="ps-显示进程"><a href="#ps-显示进程" class="headerlink" title="ps 显示进程"></a>ps 显示进程</h6><p>只输ps，只会显示当前用户正在运行的进程信息，不会显示进程状态<br>PID（进程ID） TTY（控制终端名称）TIME（消耗CPU总时间和） CMD（正在被执行的命令的名称）<br>j 以任务格式显示进程状态<br>ax 显示所有进程<br>e 显示所有进程 包括守护进程<br>aux 显示所有用户进程<br>kill命令 终止进程</p>
 <hr>
 <p>创建变量 用= 两边不能有空格<br>获取变量 加$符号<br>当$获取的是没创建的，会自动创建，并赋值为null</p>
 <p>#注释<br>用expert可以将局部变量导出变成环境变量<br>子进程对变量的修改不会传到父进程中<br>为了区分变量和紧跟在变量后的值，会把变量用{}括起来 $(file)1</p>
 <hr>
-<p>shell 输出<br>echo 输出字符串 -n表示输出不换行！！<br>printf format [arguments] 不会自动换行<br>printf “%s\n” “hello world”<br>-左对齐 有格式符</p>
-<p>shell 输入<br>read 运行之后在终端输入<br>-t time 在t秒内结束输入<br>-p ‘String’ 使用String作为输入提示<br>-e 读入一行<br>可以同时读取多个变量</p>
-<p>shell分支控制语句<br>if express；then<br>   。。。<br>elif expressed； then<br>  。 。 。<br>else expressed； then<br>。。。<br>fi<br>（注意分号和格式）<br>case value in<br>  expression ) command<br>;;<br>esac<br>(注意 ；；和 ）)<br>循环控制语句<br>while 【expression】；do<br>command<br>done<br>(注意；和do done)<br>until 【expression】；do<br>command<br>done<br>表达式为假是才执行<br>for循化<br>for（（1；2 ；3 ；））； do<br>command<br>done<br>for var </p>
+<p>### </p>
+<h6 id="shell-输出"><a href="#shell-输出" class="headerlink" title="shell 输出"></a>shell 输出</h6><p>echo 输出字符串 -n表示输出不换行！！<br>printf format [arguments] 不会自动换行<br>printf “%s\n” “hello world”<br>-左对齐 有格式符</p>
+<h6 id="shell-输入"><a href="#shell-输入" class="headerlink" title="shell 输入"></a>shell 输入</h6><p>read 运行之后在终端输入<br>-t time 在t秒内结束输入<br>-p ‘String’ 使用String作为输入提示<br>-e 读入一行<br>可以同时读取多个变量</p>
+<h6 id="shell分支控制语句"><a href="#shell分支控制语句" class="headerlink" title="shell分支控制语句"></a>shell分支控制语句</h6><p>if express；then<br>   。。。<br>elif expressed； then<br>  。 。 。<br>else expressed； then<br>。。。<br>fi<br>（注意分号和格式）<br>case value in<br>  expression ) command<br>;;<br>esac<br>(注意 ；；和 ）)</p>
+<h6 id="循环控制语句"><a href="#循环控制语句" class="headerlink" title="循环控制语句"></a>循环控制语句</h6><p>while 【expression】；do<br>command<br>done<br>(注意；和do done)<br>until 【expression】；do<br>command<br>done<br>表达式为假是才执行</p>
+<h6 id="for循化"><a href="#for循化" class="headerlink" title="for循化"></a>for循化</h6><p>for（（1；2 ；3 ；））； do<br>command<br>done<br>for var </p>
 <hr>
-<h3 id="test命令："><a href="#test命令：" class="headerlink" title="test命令："></a>test命令：</h3><p>=~ 左边字符串匹配右边正则表达式 返回true<br>判断整数的表达式：<br>num1 -eq num2 等于<br>num1 -ne num2 不等于<br>num1 -le num2 小于等于<br>num1 -lt num2 小于<br>num1 -ge num2 大于等于<br>num1 -gt num2 大于<br>字符串：<br>str 为空<br>-n str 长度大于0<br>-z str 长度等于0<br>str1 == str2 等于<br>str1 != str2 不等于</p>
+<h3 id="test命令："><a href="#test命令：" class="headerlink" title="test命令："></a>test命令：</h3><p>=~ 左边字符串匹配右边正则表达式 返回true</p>
+<h6 id="判断整数的表达式："><a href="#判断整数的表达式：" class="headerlink" title="判断整数的表达式："></a>判断整数的表达式：</h6><p>num1 -eq num2 等于<br>num1 -ne num2 不等于<br>num1 -le num2 小于等于<br>num1 -lt num2 小于<br>num1 -ge num2 大于等于<br>num1 -gt num2 大于</p>
+<h6 id="字符串："><a href="#字符串：" class="headerlink" title="字符串："></a>字符串：</h6><p>str 为空<br>-n str 长度大于0<br>-z str 长度等于0<br>str1 == str2 等于<br>str1 != str2 不等于</p>
 <p>[ ] &amp;&amp; [ ]<br>([ ]||[ ])</p>
-<h4 id="获取位置参数"><a href="#获取位置参数" class="headerlink" title="获取位置参数"></a>获取位置参数</h4><p>$0 执行程序所在的完整路径<br>$# 参数的数目<br>$<em> 所有参数列表  用“$</em>” 会把所有参数以空格分开当做字符串<br>$@ 所有参数列表 区分没一个参数 “$@”也会单独区分每一个参数<br>$? 最后一次运行返回的值 相当于返回值</p>
+<hr>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><h6 id="获取位置参数"><a href="#获取位置参数" class="headerlink" title="获取位置参数"></a>获取位置参数</h6><p>$0 执行程序所在的完整路径<br>$# 参数的数目<br>$<em> 所有参数列表  用“$</em>” 会把所有参数以空格分开当做字符串<br>$@ 所有参数列表 区分没一个参数 “$@”也会单独区分每一个参数<br>$? 最后一次运行返回的值 相当于返回值</p>
 <hr>
 <h3 id="数组："><a href="#数组：" class="headerlink" title="数组："></a>数组：</h3><p>unset array 删除数组<br>unset array[1] 删除数组中值为1的数<br>array={1 2 3 4 5 6}<br>array={[0]=1 [3]=2}<br>array+={4 6} 在数组后面追加4和6<br>array[2]=10 定义数组，但是只会为下标为2的数组分配空间 0 1不会<br>echo ${array[2]}  获取数组下标为2是值</p>
 <hr>
